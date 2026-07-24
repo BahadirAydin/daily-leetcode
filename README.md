@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-Daily LeetCode practice in Python. One folder per problem, numbered and zero-padded.
+Daily LeetCode practice in Python. One folder per problem
 
 ## Structure
 
