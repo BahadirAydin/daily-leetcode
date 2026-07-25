@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Regenerate README.md with a table of every solved problem.
+Regenerate README.md with solve stats and a table of every solved problem.
 
 Scans problems/*/notes.md for YAML frontmatter (number, title,
-difficulty, tags, date, url) and writes a sorted markdown table
-into README.md between two marker comments, leaving the rest of
-the README untouched.
+difficulty, tags, date, url), computes a streak + tag breakdown,
+and writes them into README.md between marker comments, leaving
+the rest of the README untouched.
 
 Usage:
     python scripts/update_readme.py
 
 Tip: wire this into a git pre-commit hook or a GitHub Action so
-the table never goes stale.
+the stats never go stale.
 """
+import datetime
 import re
 from pathlib import Path
 
@@ -20,8 +21,10 @@ ROOT = Path(__file__).resolve().parent.parent
 PROBLEMS_DIR = ROOT / "problems"
 README_PATH = ROOT / "README.md"
 
-START_MARKER = "<!-- PROBLEMS_TABLE_START -->"
-END_MARKER = "<!-- PROBLEMS_TABLE_END -->"
+STATS_START = "<!-- STATS_START -->"
+STATS_END = "<!-- STATS_END -->"
+TABLE_START = "<!-- PROBLEMS_TABLE_START -->"
+TABLE_END = "<!-- PROBLEMS_TABLE_END -->"
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
@@ -66,18 +69,89 @@ def collect_problems():
     return rows
 
 
-def build_table(rows) -> str:
+def parse_dates(rows):
+    dates = set()
+    for r in rows:
+        if not r["date"]:
+            continue
+        try:
+            dates.add(datetime.date.fromisoformat(r["date"]))
+        except ValueError:
+            continue
+    return sorted(dates)
+
+
+def compute_streaks(dates, today=None):
+    """Return (current_streak, longest_streak) in days, counting one solve-day as 1."""
+    if not dates:
+        return 0, 0
+
+    today = today or datetime.date.today()
+    longest = 1
+    run = 1
+    for prev, curr in zip(dates, dates[1:]):
+        if (curr - prev).days == 1:
+            run += 1
+        else:
+            longest = max(longest, run)
+            run = 1
+    longest = max(longest, run)
+
+    last_solved = dates[-1]
+    if (today - last_solved).days > 1:
+        return 0, longest
+
+    current = 1
+    for i in range(len(dates) - 1, 0, -1):
+        if (dates[i] - dates[i - 1]).days == 1:
+            current += 1
+        else:
+            break
+    return current, longest
+
+
+def tag_counts(rows):
+    counts = {}
+    for r in rows:
+        tags = r["tags"] if isinstance(r["tags"], list) else []
+        for tag in tags:
+            counts[tag] = counts.get(tag, 0) + 1
+    return sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+
+
+def build_stats(rows) -> str:
     if not rows:
-        return "_No problems solved yet._\n"
+        return "_No problems solved yet — the streak starts today._\n"
 
     counts = {"Easy": 0, "Medium": 0, "Hard": 0, "Unknown": 0}
     for r in rows:
         counts[r["difficulty"]] = counts.get(r["difficulty"], 0) + 1
 
+    dates = parse_dates(rows)
+    current, longest = compute_streaks(dates)
+
     lines = [
-        f"**Total solved: {len(rows)}**  ",
-        f"Easy: {counts['Easy']} · Medium: {counts['Medium']} · Hard: {counts['Hard']}",
-        "",
+        f"**{len(rows)} solved** · Easy {counts['Easy']} · Medium {counts['Medium']} · Hard {counts['Hard']}  ",
+    ]
+    if current > 0:
+        lines.append(f"**Current streak: {current} day{'s' if current != 1 else ''}** · longest {longest}")
+    else:
+        lines.append(f"Streak's cold — longest run was {longest} day{'s' if longest != 1 else ''}. Solve one today.")
+
+    tags = tag_counts(rows)
+    if tags:
+        top = ", ".join(f"{tag} ({count})" for tag, count in tags[:8])
+        lines.append("")
+        lines.append(f"**Most-practiced tags:** {top}")
+
+    return "\n".join(lines) + "\n"
+
+
+def build_table(rows) -> str:
+    if not rows:
+        return "_No problems solved yet._\n"
+
+    lines = [
         "| # | Title | Difficulty | Tags | Date |",
         "|---|-------|------------|------|------|",
     ]
@@ -88,19 +162,26 @@ def build_table(rows) -> str:
     return "\n".join(lines) + "\n"
 
 
-def update_readme(rows):
-    block = f"{START_MARKER}\n{build_table(rows)}{END_MARKER}"
+def replace_block(content: str, start: str, end: str, body: str) -> str:
+    block = f"{start}\n{body}{end}"
+    if start in content and end in content:
+        pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
+        return pattern.sub(block, content)
+    return content.rstrip() + "\n\n" + block + "\n"
 
+
+def update_readme(rows):
     if README_PATH.exists():
         content = README_PATH.read_text(encoding="utf-8")
     else:
-        content = "# LeetCode Solutions\n\n" + START_MARKER + "\n" + END_MARKER + "\n"
+        content = (
+            f"# LeetCode Solutions\n\n"
+            f"{STATS_START}\n{STATS_END}\n\n"
+            f"{TABLE_START}\n{TABLE_END}\n"
+        )
 
-    if START_MARKER in content and END_MARKER in content:
-        pattern = re.compile(re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER), re.DOTALL)
-        content = pattern.sub(block, content)
-    else:
-        content = content.rstrip() + "\n\n" + block + "\n"
+    content = replace_block(content, STATS_START, STATS_END, build_stats(rows))
+    content = replace_block(content, TABLE_START, TABLE_END, build_table(rows))
 
     README_PATH.write_text(content, encoding="utf-8")
     print(f"Updated {README_PATH} with {len(rows)} problems.")
