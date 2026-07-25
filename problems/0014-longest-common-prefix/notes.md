@@ -1,6 +1,6 @@
 ---
 number: 14
-title: longest-common-prefix
+title: Longest Common Prefix
 difficulty: Easy
 tags: [array, string, trie]
 date: 2026-07-23
