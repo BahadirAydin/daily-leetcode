@@ -45,12 +45,10 @@ python scripts/update_readme.py
 ## Solved Problems
 
 <!-- PROBLEMS_TABLE_START -->
-**Total solved: 3**  
-Easy: 3 · Medium: 0 · Hard: 0
-
 | # | Title | Difficulty | Tags | Date |
 |---|-------|------------|------|------|
-| 0014 | [longest-common-prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | array, string, trie | 2026-07-23 |
-| 0344 | [reverse-string](https://leetcode.com/problems/reverse-string/) | Easy | two-pointers, string | 2026-07-24 |
+| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | array, string, trie | 2026-07-23 |
+| 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | array, hash-table, sorting, string | 2026-07-25 |
+| 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | two-pointers, string | 2026-07-24 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
 <!-- PROBLEMS_TABLE_END -->
