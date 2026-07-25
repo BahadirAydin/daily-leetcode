@@ -1,6 +1,6 @@
 ---
 number: 344
-title: reverse-string
+title: Reverse String
 difficulty: Easy
 tags: [two-pointers, string]
 date: 2026-07-24
