@@ -17,12 +17,16 @@ import datetime
 import re
 from pathlib import Path
 
+import problem_lists
+
 ROOT = Path(__file__).resolve().parent.parent
 PROBLEMS_DIR = ROOT / "problems"
 README_PATH = ROOT / "README.md"
 
 STATS_START = "<!-- STATS_START -->"
 STATS_END = "<!-- STATS_END -->"
+LISTS_START = "<!-- LISTS_START -->"
+LISTS_END = "<!-- LISTS_END -->"
 TABLE_START = "<!-- PROBLEMS_TABLE_START -->"
 TABLE_END = "<!-- PROBLEMS_TABLE_END -->"
 
@@ -64,6 +68,7 @@ def collect_problems():
             "tags": meta.get("tags", []),
             "date": meta.get("date", ""),
             "url": meta.get("url", ""),
+            "folder": f"{PROBLEMS_DIR.name}/{folder.name}",
         })
     rows.sort(key=lambda r: r["number"])
     return rows
@@ -110,15 +115,6 @@ def compute_streaks(dates, today=None):
     return current, longest
 
 
-def tag_counts(rows):
-    counts = {}
-    for r in rows:
-        tags = r["tags"] if isinstance(r["tags"], list) else []
-        for tag in tags:
-            counts[tag] = counts.get(tag, 0) + 1
-    return sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
-
-
 def build_stats(rows) -> str:
     if not rows:
         return "_No problems solved yet — the streak starts today._\n"
@@ -137,12 +133,6 @@ def build_stats(rows) -> str:
         lines.append(f"**Current streak: {current} day{'s' if current != 1 else ''}** · longest {longest}")
     else:
         lines.append(f"Streak's cold — longest run was {longest} day{'s' if longest != 1 else ''}. Solve one today.")
-
-    tags = tag_counts(rows)
-    if tags:
-        top = ", ".join(f"{tag} ({count})" for tag, count in tags[:8])
-        lines.append("")
-        lines.append(f"**Most-practiced tags:** {top}")
 
     return "\n".join(lines) + "\n"
 
@@ -163,10 +153,17 @@ def build_table(rows) -> str:
 
 
 def replace_block(content: str, start: str, end: str, body: str) -> str:
+    """Replace the first start..end block, or append one if absent.
+
+    Only the first occurrence is touched on purpose: if a stray duplicate
+    marker pair ever ends up in the README (a bad merge, say), filling both
+    would keep the duplicate silently in sync forever instead of letting it
+    be noticed and deleted.
+    """
     block = f"{start}\n{body}{end}"
     if start in content and end in content:
         pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
-        return pattern.sub(block, content)
+        return pattern.sub(lambda _: block, content, count=1)
     return content.rstrip() + "\n\n" + block + "\n"
 
 
@@ -177,14 +174,25 @@ def update_readme(rows):
         content = (
             f"# LeetCode Solutions\n\n"
             f"{STATS_START}\n{STATS_END}\n\n"
+            f"{LISTS_START}\n{LISTS_END}\n\n"
             f"{TABLE_START}\n{TABLE_END}\n"
         )
 
+    solved_by_number = {r["number"]: r for r in rows}
+    lists = problem_lists.load_lists()
+
     content = replace_block(content, STATS_START, STATS_END, build_stats(rows))
+    content = replace_block(content, LISTS_START, LISTS_END,
+                            problem_lists.build_lists_block(lists, solved_by_number))
     content = replace_block(content, TABLE_START, TABLE_END, build_table(rows))
 
     README_PATH.write_text(content, encoding="utf-8")
+
+    pages = problem_lists.write_list_pages(lists, solved_by_number)
     print(f"Updated {README_PATH} with {len(rows)} problems.")
+    for page, data in zip(pages, lists):
+        done, total = problem_lists.list_progress(data, solved_by_number)
+        print(f"  - {page.relative_to(ROOT)}: {done}/{total}")
 
 
 def main():
