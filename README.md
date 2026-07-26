@@ -1,13 +1,16 @@
-# LeetCode Solutions
-
-Daily LeetCode practice in Python. One folder per problem
-
+# Daily Leetcode
 <!-- STATS_START -->
-**4 solved** · Easy 3 · Medium 1 · Hard 0  
-**Current streak: 4 days** · longest 4
-
-**Most-practiced tags:** array (3), string (3), hash-table (1), mid-level (1), simulation (1), sorting (1), trie (1), two-pointers (1)
+**5 solved** · Easy 3 · Medium 2 · Hard 0  
+**Current streak: 5 days** · longest 5
 <!-- STATS_END -->
+
+## Lists
+
+<!-- LISTS_START -->
+**[NeetCode 250](lists/neetcode-250.md)** — 5/250 ░░░░░░░░░░░░ 2%
+
+**Patterns practiced:** Arrays & Hashing (4) · Two Pointers (1)
+<!-- LISTS_END -->
 
 ## Solved
 
@@ -16,39 +19,19 @@ Daily LeetCode practice in Python. One folder per problem
 |---|-------|------------|------|------|
 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | array, string, trie | 2026-07-23 |
 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | array, hash-table, sorting, string | 2026-07-25 |
+| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | array, sorting, two-pointers | 2026-07-26 |
 | 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | two-pointers, string | 2026-07-24 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
 <!-- PROBLEMS_TABLE_END -->
-
-## How it's organized
-
-```
-problems/
-  0001-two-sum/
-    solution.py
-    test_solution.py
-    notes.md
-```
 
 ## Scripts
 
-Create the folder structure for a new problem:
+Scaffold a new problem:
 ```bash
-python scripts/new_problem.py 42 "Trapping Rain Water" -d Hard -t array,two-pointers,stack -f trap
+python scripts/new_problem.py 42 --fetch
 ```
 
-Regenerate the table below after solving problems:
+Regenerate everything above after solving something:
 ```bash
 python scripts/update_readme.py
 ```
-
-## Solved Problems
-
-<!-- PROBLEMS_TABLE_START -->
-| # | Title | Difficulty | Tags | Date |
-|---|-------|------------|------|------|
-| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | array, string, trie | 2026-07-23 |
-| 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | array, hash-table, sorting, string | 2026-07-25 |
-| 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | two-pointers, string | 2026-07-24 |
-| 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
-<!-- PROBLEMS_TABLE_END -->
