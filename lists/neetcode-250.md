@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**5 / 250** ░░░░░░░░░░░░ 2%
+**5 / 250** solved (2%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|

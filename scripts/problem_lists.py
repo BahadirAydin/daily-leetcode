@@ -16,7 +16,6 @@ ROOT = Path(__file__).resolve().parent.parent
 LISTS_DIR = ROOT / "lists"
 
 DONE, TODO = "✅", "⬜"
-FILLED, EMPTY = "▓", "░"
 
 
 def load_lists(lists_dir: Path = LISTS_DIR):
@@ -32,13 +31,6 @@ def load_lists(lists_dir: Path = LISTS_DIR):
         out.append(data)
     out.sort(key=lambda d: d["name"])
     return out
-
-
-def progress_bar(done: int, total: int, width: int = 12) -> str:
-    if total <= 0:
-        return EMPTY * width
-    filled = round(width * done / total)
-    return FILLED * filled + EMPTY * (width - filled)
 
 
 def percent(done: int, total: int) -> int:
@@ -92,9 +84,7 @@ def render_list_markdown(data, solved_by_number) -> str:
     if data.get("url"):
         lines.append(f"Original list: <{data['url']}>")
         lines.append("")
-    lines.append(
-        f"**{done} / {total}** {progress_bar(done, total)} {percent(done, total)}%"
-    )
+    lines.append(f"**{done} / {total}** solved ({percent(done, total)}%)")
     lines += [
         "",
         "| | # | Problem | Difficulty | Mine |",
@@ -127,7 +117,7 @@ def build_lists_block(lists, solved_by_number) -> str:
         done, total = list_progress(data, solved_by_number)
         blocks.append(
             f"**[{data['name']}](lists/{data['slug']}.md)** — "
-            f"{done}/{total} {progress_bar(done, total)} {percent(done, total)}%"
+            f"{done}/{total} ({percent(done, total)}%)"
         )
 
     patterns = pattern_counts(lists, solved_by_number)

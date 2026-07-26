@@ -7,7 +7,7 @@
 ## Lists
 
 <!-- LISTS_START -->
-**[NeetCode 250](lists/neetcode-250.md)** — 5/250 ░░░░░░░░░░░░ 2%
+**[NeetCode 250](lists/neetcode-250.md)** — 5/250 (2%)
 
 **Patterns practiced:** Arrays & Hashing (4) · Two Pointers (1)
 <!-- LISTS_END -->
