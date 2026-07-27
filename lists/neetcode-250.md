@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**5 / 250** solved (2%)
+**6 / 250** solved (2%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
@@ -20,7 +20,7 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | — |
 | ⬜ | 912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium | — |
 | ✅ | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | [solution](../problems/0075-sort-colors/) |
-| ⬜ | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | — |
+| ✅ | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | [solution](../problems/0347-top-k-frequent-elements/) |
 | ⬜ | 271 | [Encode and Decode Strings 🔒](https://leetcode.com/problems/encode-and-decode-strings/) | Medium | — |
 | ⬜ | 304 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | Medium | — |
 | ⬜ | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | — |
