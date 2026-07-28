@@ -1,1 +1,5 @@
 __pycache__/
+.pytest_cache/
+
+# Tests for the helper scripts stay local
+scripts/test_*.py
