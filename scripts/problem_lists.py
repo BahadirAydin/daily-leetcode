@@ -51,28 +51,6 @@ def off_list_solves(lists, solved_by_number):
     ]
 
 
-def pattern_counts(lists, solved_by_number):
-    """Solved problems grouped by NeetCode pattern, most-practiced first.
-
-    Patterns are a property of the curated lists, not of problems/, so a
-    solve outside every list can't be attributed to one. Only patterns
-    actually practiced are returned — showing the 18 buckets with mostly
-    zeroes would just be a list of what's undone.
-    """
-    # Resolve each problem to one pattern first, so a problem sitting in
-    # two lists isn't counted twice.
-    by_number = {}
-    for data in lists:
-        for p in data["problems"]:
-            if p.get("pattern") and p["number"] in solved_by_number:
-                by_number.setdefault(p["number"], p["pattern"])
-
-    counts = {}
-    for pattern in by_number.values():
-        counts[pattern] = counts.get(pattern, 0) + 1
-    return sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
-
-
 def render_list_markdown(data, solved_by_number) -> str:
     """Render one list to its own markdown page, ticking off what's solved."""
     done, total = list_progress(data, solved_by_number)
@@ -118,13 +96,6 @@ def build_lists_block(lists, solved_by_number) -> str:
         blocks.append(
             f"**[{data['name']}](lists/{data['slug']}.md)** — "
             f"{done}/{total} ({percent(done, total)}%)"
-        )
-
-    patterns = pattern_counts(lists, solved_by_number)
-    if patterns:
-        blocks.append(
-            "**Patterns practiced:** "
-            + " · ".join(f"{name} ({count})" for name, count in patterns)
         )
 
     extra = off_list_solves(lists, solved_by_number)
