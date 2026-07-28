@@ -129,9 +129,7 @@ def build_lists_block(lists, solved_by_number) -> str:
 
     extra = off_list_solves(lists, solved_by_number)
     if extra:
-        blocks.append(
-            f"_Plus {len(extra)} solved outside any list — they count all the same._"
-        )
+        blocks.append(f"_Plus {len(extra)} solved outside the list.")
     return "\n\n".join(blocks) + "\n"
 
 
