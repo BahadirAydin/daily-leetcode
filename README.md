@@ -1,7 +1,7 @@
 # Daily Leetcode
 <!-- STATS_START -->
-**8 solved** · Easy 3 · Medium 4 · Hard 1  
-**Current streak: 8 days** · longest 8
+**9 solved** · Easy 4 · Medium 4 · Hard 1  
+**Current streak: 9 days** · longest 9
 <!-- STATS_END -->
 
 ## Lists
@@ -9,7 +9,7 @@
 <!-- LISTS_START -->
 **[NeetCode 250](lists/neetcode-250.md)** — 6/250 (2%)
 
-_Plus 2 solved outside the list.
+_Plus 3 solved outside the list.
 <!-- LISTS_END -->
 
 ## Solved
@@ -25,6 +25,7 @@ _Plus 2 solved outside the list.
 | 1665 | [Minimum Initial Energy to Finish Tasks](https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/) | Hard | array, greedy, sorting | 2026-07-28 |
 | 1846 | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/) | Medium | array, greedy, sorting | 2026-07-29 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
+| 2315 | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy | string | 2026-07-30 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Scripts
