@@ -1,7 +1,7 @@
 # Daily Leetcode
 <!-- STATS_START -->
-**9 solved** · Easy 4 · Medium 4 · Hard 1  
-**Current streak: 9 days** · longest 9
+**10 solved** · Easy 4 · Medium 5 · Hard 1  
+**Current streak: 10 days** · longest 10
 <!-- STATS_END -->
 
 ## Lists
@@ -9,7 +9,7 @@
 <!-- LISTS_START -->
 **[NeetCode 250](lists/neetcode-250.md)** — 6/250 (2%)
 
-_Plus 3 solved outside the list.
+_Plus 4 solved outside the list.
 <!-- LISTS_END -->
 
 ## Solved
@@ -26,6 +26,7 @@ _Plus 3 solved outside the list.
 | 1846 | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/) | Medium | array, greedy, sorting | 2026-07-29 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
 | 2315 | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy | string | 2026-07-30 |
+| 2789 | [Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/) | Medium | array, greedy | 2026-07-31 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Scripts
