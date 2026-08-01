@@ -1,42 +1,28 @@
-# Daily Leetcode
+# Daily Leetcode 🐧
 <!-- STATS_START -->
-**10 solved** · Easy 4 · Medium 5 · Hard 1  
-**Current streak: 10 days** · longest 10
+**11 solved** · Easy 4 · Medium 6 · Hard 1  
+**Current streak: 11 days** · longest 11 🔥
 <!-- STATS_END -->
-
-## Lists
-
-<!-- LISTS_START -->
-**[NeetCode 250](lists/neetcode-250.md)** — 6/250 (2%)
-
-_Plus 4 solved outside the list.
-<!-- LISTS_END -->
 
 ## Solved
 
 <!-- PROBLEMS_TABLE_START -->
-| # | Title | Difficulty | Tags | Date |
-|---|-------|------------|------|------|
-| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy | array, string, trie | 2026-07-23 |
-| 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | array, hash-table, sorting, string | 2026-07-25 |
-| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | array, sorting, two-pointers | 2026-07-26 |
-| 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | two-pointers, string | 2026-07-24 |
-| 0347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | array, bucket-sort, counting, divide-and-conquer, hash-table, heap-priority-queue, quickselect, sorting | 2026-07-27 |
-| 1665 | [Minimum Initial Energy to Finish Tasks](https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/) | Hard | array, greedy, sorting | 2026-07-28 |
-| 1846 | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/) | Medium | array, greedy, sorting | 2026-07-29 |
-| 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation, mid-level | 2026-07-22 |
-| 2315 | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy | string | 2026-07-30 |
-| 2789 | [Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/) | Medium | array, greedy | 2026-07-31 |
+| Date | # | Title | Difficulty |
+|------|---|-------|------------|
+| 2026-07-22 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy |
+| 2026-07-23 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | Easy |
+| 2026-07-24 | 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy |
+| 2026-07-25 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium |
+| 2026-07-26 | 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium |
+| 2026-07-27 | 0347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium |
+| 2026-07-28 | 1665 | [Minimum Initial Energy to Finish Tasks](https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/) | Hard |
+| 2026-07-29 | 1846 | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/) | Medium |
+| 2026-07-30 | 2315 | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy |
+| 2026-07-31 | 2789 | [Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/) | Medium |
+| 2026-08-01 | 3397 | [Maximum Number of Distinct Elements After Operations](https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations/) | Medium |
 <!-- PROBLEMS_TABLE_END -->
+## Lists
 
-## Scripts
-
-Scaffold a new problem:
-```bash
-python scripts/new_problem.py 42 --fetch
-```
-
-Regenerate everything above after solving something:
-```bash
-python scripts/update_readme.py
-```
+<!-- LISTS_START -->
+**[NeetCode 250](lists/neetcode-250.md)** — 6/250 (2%)
+<!-- LISTS_END -->
