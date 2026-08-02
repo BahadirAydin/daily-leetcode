@@ -130,7 +130,7 @@ def build_stats(rows) -> str:
     current, longest = compute_streaks(dates)
 
     lines = [
-        f"**{len(rows)} solved** · Easy {counts['Easy']} · Medium {counts['Medium']} · Hard {counts['Hard']}  ",
+        f"**{len(rows)} solved** · 🟢 {counts['Easy']} · 🟡 {counts['Medium']} · 🔴 {counts['Hard']}  ",
     ]
     if current > 0:
         lines.append(
@@ -153,10 +153,12 @@ def build_table(rows) -> str:
         "| Date | # | Title | Difficulty |",
         "|------|---|-------|------------|",
     ]
+    diff_map = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}
     for r in rows:
         title_cell = f"[{r['title']}]({r['url']})" if r["url"] else r["title"]
+        diff_emoji = diff_map.get(r['difficulty'], r['difficulty'])
         lines.append(
-            f"| {r['date']} | {r['number']:04d} | {title_cell} | {r['difficulty']} |"
+            f"| {r['date']} | {r['number']:04d} | {title_cell} | {diff_emoji} |"
         )
     return "\n".join(lines) + "\n"
 
