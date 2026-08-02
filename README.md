@@ -20,10 +20,10 @@
 | 2026-07-30 | 2315 | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | 🟢 |
 | 2026-07-31 | 2789 | [Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/) | 🟡 |
 | 2026-08-01 | 3397 | [Maximum Number of Distinct Elements After Operations](https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations/) | 🟡 |
-| 2026-08-02 | 1640 | [Check Array Formation Through Concatenation](https://leetcode.com/problems/check-array-formation-through-concatenation/) | 🟢 |
+| 2026-08-02 | 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | 🟢 |
 <!-- PROBLEMS_TABLE_END -->
 ## Lists
 
 <!-- LISTS_START -->
-**[NeetCode 250](lists/neetcode-250.md)** — 6/250 (2%)
+**[NeetCode 250](lists/neetcode-250.md)** — 7/250 (3%)
 <!-- LISTS_END -->

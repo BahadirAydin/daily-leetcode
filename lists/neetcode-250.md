@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**6 / 250** solved (2%)
+**7 / 250** solved (3%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
@@ -43,7 +43,7 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | — |
 | ⬜ | 881 | [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/) | Medium | — |
 | ⬜ | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | — |
-| ⬜ | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | — |
+| ✅ | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | [solution](../problems/0219-contains-duplicate-ii/) |
 | ⬜ | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | — |
 | ⬜ | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | — |
 | ⬜ | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium | — |
