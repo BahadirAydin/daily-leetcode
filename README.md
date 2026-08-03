@@ -1,7 +1,7 @@
 # Daily Leetcode 🐧
 <!-- STATS_START -->
-**12 solved** · 🟢 5 · 🟡 6 · 🔴 1  
-**Current streak: 12 days** · longest 12 🔥
+**13 solved** · 🟢 5 · 🟡 7 · 🔴 1  
+**Current streak: 13 days** · longest 13 🔥
 <!-- STATS_END -->
 
 ## Solved
@@ -21,6 +21,7 @@
 | 2026-07-31 | 2789 | [Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/) | 🟡 |
 | 2026-08-01 | 3397 | [Maximum Number of Distinct Elements After Operations](https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations/) | 🟡 |
 | 2026-08-02 | 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | 🟢 |
+| 2026-08-03 | 1138 | [Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 ## Lists
 
