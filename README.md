@@ -1,7 +1,7 @@
 # Daily Leetcode 🐧
 <!-- STATS_START -->
-**13 solved** · 🟢 5 · 🟡 7 · 🔴 1  
-**Current streak: 13 days** · longest 13 🔥
+**15 solved** · 🟢 7 · 🟡 7 · 🔴 1  
+**Current streak: 14 days** · longest 14 🔥
 <!-- STATS_END -->
 
 ## Solved
@@ -22,9 +22,11 @@
 | 2026-08-01 | 3397 | [Maximum Number of Distinct Elements After Operations](https://leetcode.com/problems/maximum-number-of-distinct-elements-after-operations/) | 🟡 |
 | 2026-08-02 | 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | 🟢 |
 | 2026-08-03 | 1138 | [Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/) | 🟡 |
+| 2026-08-04 | 0682 | [Baseball Game](https://leetcode.com/problems/baseball-game/) | 🟢 |
+| 2026-08-04 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | 🟢 |
 <!-- PROBLEMS_TABLE_END -->
 ## Lists
 
 <!-- LISTS_START -->
-**[NeetCode 250](lists/neetcode-250.md)** — 7/250 (3%)
+**[NeetCode 250](lists/neetcode-250.md)** — 9/250 (4%)
 <!-- LISTS_END -->

@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**7 / 250** solved (3%)
+**9 / 250** solved (4%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
@@ -52,7 +52,7 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 658 | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/) | Medium | — |
 | ⬜ | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | — |
 | ⬜ | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | — |
-| ⬜ | 682 | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | — |
+| ✅ | 682 | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | [solution](../problems/0682-baseball-game/) |
 | ⬜ | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | — |
 | ⬜ | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | — |
 | ⬜ | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | — |
@@ -66,7 +66,7 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 394 | [Decode String](https://leetcode.com/problems/decode-string/) | Medium | — |
 | ⬜ | 895 | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | Hard | — |
 | ⬜ | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | — |
-| ⬜ | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | — |
+| ✅ | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | [solution](../problems/0704-binary-search/) |
 | ⬜ | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | — |
 | ⬜ | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Easy | — |
 | ⬜ | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | — |
