@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**9 / 250** solved (4%)
+**11 / 250** solved (4%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
@@ -117,10 +117,10 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 1325 | [Delete Leaves With a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | Medium | — |
 | ⬜ | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | — |
 | ⬜ | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | — |
-| ⬜ | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Easy | — |
+| ✅ | 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Easy | [solution](../problems/0703-kth-largest-element-in-a-stream/) |
 | ⬜ | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Easy | — |
 | ⬜ | 973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | — |
-| ⬜ | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | — |
+| ✅ | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | [solution](../problems/0215-kth-largest-element-in-an-array/) |
 | ⬜ | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | — |
 | ⬜ | 355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | Medium | — |
 | ⬜ | 1834 | [Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/) | Medium | — |
