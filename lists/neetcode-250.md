@@ -4,7 +4,7 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**11 / 250** solved (4%)
+**13 / 250** solved (5%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
@@ -94,8 +94,8 @@ Original list: <https://neetcode.io/practice>
 | ⬜ | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | — |
 | ⬜ | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | — |
 | ⬜ | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | — |
-| ⬜ | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | — |
-| ⬜ | 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Easy | — |
+| ✅ | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | [solution](../problems/0094-binary-tree-inorder-traversal/) |
+| ✅ | 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Easy | [solution](../problems/0144-binary-tree-preorder-traversal/) |
 | ⬜ | 145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Easy | — |
 | ⬜ | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | — |
 | ⬜ | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | — |
