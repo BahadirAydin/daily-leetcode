@@ -4,14 +4,14 @@ The extended 250, grouped by pattern.
 
 Original list: <https://neetcode.io/practice>
 
-**13 / 250** solved (5%)
+**14 / 250** solved (6%)
 
 | | # | Problem | Difficulty | Mine |
 |---|---|---------|------------|------|
 | ✅ | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | [solution](../problems/1929-concatenation-of-array/) |
 | ⬜ | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | — |
 | ⬜ | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | — |
-| ⬜ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | — |
+| ✅ | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | [solution](../problems/0001-two-sum/) |
 | ✅ | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | [solution](../problems/0014-longest-common-prefix/) |
 | ✅ | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | [solution](../problems/0049-group-anagrams/) |
 | ⬜ | 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | — |

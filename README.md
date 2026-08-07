@@ -1,7 +1,7 @@
 # Daily Leetcode 🐧
 <!-- STATS_START -->
-**19 solved** · 🟢 10 · 🟡 8 · 🔴 1  
-**Current streak: 16 days** · longest 16 🔥
+**20 solved** · 🟢 11 · 🟡 8 · 🔴 1  
+**Current streak: 17 days** · longest 17 🔥
 <!-- STATS_END -->
 
 ## Solved
@@ -28,9 +28,10 @@
 | 2026-08-05 | 0703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | 🟢 |
 | 2026-08-06 | 0094 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | 🟢 |
 | 2026-08-06 | 0144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | 🟢 |
+| 2026-08-07 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 |
 <!-- PROBLEMS_TABLE_END -->
 ## Lists
 
 <!-- LISTS_START -->
-**[NeetCode 250](lists/neetcode-250.md)** — 13/250 (5%)
+**[NeetCode 250](lists/neetcode-250.md)** — 14/250 (6%)
 <!-- LISTS_END -->
